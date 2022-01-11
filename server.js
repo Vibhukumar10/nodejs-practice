@@ -8,7 +8,13 @@ const {
 } = require('./controllers/productController')
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/api/products' && req.method === 'GET') {
+    if (req.url === '/') {
+        res.end(
+            JSON.stringify({
+                message: "Weclome to Vanilla-Nodejs-API, go to '/api/products'",
+            })
+        )
+    } else if (req.url === '/api/products' && req.method === 'GET') {
         getProducts(req, res)
     } else if (
         req.url.match(/\/api\/products\/(\S+)/) &&
