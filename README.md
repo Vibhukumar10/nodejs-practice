@@ -1,3 +1,3 @@
-## Rest-api using vanilla-Nodejs :smile:
+## Rest-api using Vanilla-Nodejs :smile:
 
 -   [Link to API](https://vanilla-rest-api-nodejs.herokuapp.com/)
