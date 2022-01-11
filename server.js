@@ -9,10 +9,9 @@ const {
 
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
+        res.writeHead(404, { 'Content-Type': 'text/html' })
         res.end(
-            JSON.stringify({
-                message: "Weclome to Vanilla-Nodejs-API, go to '/api/products'",
-            })
+            "<h2>Welcome to Vanilla-Nodejs-API, </h2><ul><li>Go to '/api/products' to get all products</li><li>Go to '/api/products/:id' to get product by Id</li><li>To do functions, such as CREATE, UPDATE and DELETE, use postman</li></ul>"
         )
     } else if (req.url === '/api/products' && req.method === 'GET') {
         getProducts(req, res)
